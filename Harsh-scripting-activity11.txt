@@ -1,0 +1,5 @@
+#!/bin/sh
+
+readarray -t numbers < numbers.txt
+a
+

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+readarray -t file1 < file1.txt
+readarray -t file2 < file2.txt
+
+echo "Only in file 1: "
+for elem in "${file1[@]}";
+do
+	if [[ ! " ${file2[*]} " =~ " ${elem} " ]]; then
+		echo $elem
+	fi
+done
+
+echo "Only in file 2: "
+for elem in "${file2[@]}";
+do
+	if [[ ! " ${file1[*]} " =~ " ${elem} " ]]; then
+		echo $elem
+	fi
+done
+

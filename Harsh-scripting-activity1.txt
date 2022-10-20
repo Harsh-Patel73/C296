@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo $USER
+echo $(date "+%D")
+echo $(date "+%T")
+echo $(pwd)
+echo $(ls | wc -l)
+echo $(ls -S | head -1)
+
+
+
