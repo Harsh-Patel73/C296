@@ -1,0 +1,13 @@
+#! /bin/sh
+
+while read p; do
+	while read q; do 
+		if [ $p == $q ]
+		then
+			echo "There is a common element"
+			exit 0
+		fi
+	done < compfile2.txt
+done < compfile1.txt
+
+echo "There is no common element"
